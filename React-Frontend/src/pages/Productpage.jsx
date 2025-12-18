@@ -67,7 +67,7 @@ const ProductPage = () => {
       
       // ✅ FIXED: Use /api/compare endpoint with limit param
       const response = await fetch(
-        `http://localhost:8000/api/compare?query=${encodeURIComponent(cleanQuery)}&limit=10`
+        `${import.meta.env.VITE_API_URL}/api/compare?query=${query}&limit=10`
       );
       
       if (!response.ok) {
